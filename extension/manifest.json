@@ -1,0 +1,36 @@
+{
+  "name": "Internal Traffic Marker",
+  "description": "Marks internal traffic on specified websites by appending a query parameter to the URL.",
+  "version": "1.1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "*://example.com/*",
+    "*://example.org/*"
+  ],
+  "action": {
+    "default_title": "Internal Traffic Marker Active",
+    "default_icon": {
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "internal-redirect",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "internal-traffic-marker@example.com"
+    }
+  }
+}

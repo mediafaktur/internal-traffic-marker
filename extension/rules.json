@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "addOrReplaceParams": [
+              {
+                "key": "internal",
+                "value": "true"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "example.com",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "addOrReplaceParams": [
+              {
+                "key": "internal",
+                "value": "true"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "example.org",
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]
